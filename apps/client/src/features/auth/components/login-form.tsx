@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 import APP_ROUTE from "@/lib/app-route.ts";
 import { useTranslation } from "react-i18next";
 import SsoLogin from "@/ee/components/sso-login.tsx";
+import CuraiqSsoButton from "@/features/auth/components/curaiq-sso-button.tsx";
 import { useWorkspacePublicDataQuery } from "@/features/workspace/queries/workspace-query.ts";
 import { Error404 } from "@/components/ui/error-404.tsx";
 import React from "react";
@@ -76,6 +77,8 @@ export function LoginForm() {
           <Title order={1} size="h2" ta="center" fw={500} mb="md">
             {t("Login")}
           </Title>
+
+          <CuraiqSsoButton />
 
           <SsoLogin />
 
